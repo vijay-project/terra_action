@@ -18,12 +18,10 @@ jobs:
           python-version: '3.x'
 
       - name: 'Create readme'
-        uses: 'actions/github-actions@v4.0'
+        uses: 'terra_action/github-actions@v4.0'
         with:
           actions_subcommand: 'readme'
-          #github_token: '${{ secrets.GITHUB}}'
-        #env:
-          #GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
+
 
 
       - name: pre-commit check errors
@@ -35,9 +33,8 @@ jobs:
         continue-on-error: true
 
       - name: 'push readme'
-        uses: 'actions/github-actions@v4.0'
+        uses: 'terra_action/github-actions@v4.0'
         continue-on-error: true
         with:
           actions_subcommand: 'push'
-        #env:
-          #GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
+      
