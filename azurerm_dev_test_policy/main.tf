@@ -7,5 +7,5 @@ resource "azurerm_dev_test_policy" "default" {
   evaluator_type      = var.evaluator_type
   threshold           = var.threshold
   fact_data           = var.fact_data
-  tags                = var.tags
+  tags                = var.tagsa
 }
