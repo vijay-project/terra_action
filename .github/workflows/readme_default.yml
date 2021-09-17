@@ -18,7 +18,7 @@ jobs:
           python-version: '3.x'
 
       - name: 'Create readme'
-        uses: 'vijay-project/github-actions@v4.0'
+        #uses: 'vijay-project/github-actions@v4.0'
         with:
           actions_subcommand: 'readme'
 
@@ -33,7 +33,7 @@ jobs:
         continue-on-error: true
 
       - name: 'push readme'
-        uses: 'vijay-project/github-actions@v4.0'
+        #uses: 'vijay-project/github-actions@v4.0'
         continue-on-error: true
         with:
           actions_subcommand: 'push'
