@@ -35,6 +35,11 @@ jobs:
     # Generates an execution plan for Terraform
     - name: Terraform validate
       run: terraform validate
+  
+    - name: Slack Notification
+      uses: rtCamp/action-slack-notify@v2
+      env:
+          SLACK_WEBHOOK: ${{ secrets.slack_webhook }}
    
    
 
