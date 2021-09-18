@@ -34,7 +34,7 @@ jobs:
       
     # Generates an execution plan for Terraform
     - name: Terraform validate
-      run: terraform validate -recursive
+      run: terraform validate
   
     - name: Slack Notifications
       uses: rtCamp/action-slack-notify@v2
