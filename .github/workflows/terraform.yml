@@ -30,11 +30,11 @@ jobs:
 
     # Checks that all Terraform configuration files adhere to a canonical format
     - name: Terraform Format
-      run: terraform fmt -recursive 
+      run: terragrunt run-all fmt
       
     # Generates an execution plan for Terraform
     - name: Terraform validate
-      run: terraform validate
+      run: terragrunt run-all validate
   
     - name: Slack Notifications
       uses: rtCamp/action-slack-notify@v2
